@@ -1,3 +1,5 @@
 #/bin/bash
 
-docker build --rm -t shenzhang/ubuntu .
+cd $(dirname $0)
+
+docker build --rm -t shenzhang/go-agent .

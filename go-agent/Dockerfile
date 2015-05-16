@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-#ADD share /share
+FROM shenzhang/ubuntu-java7
 
-#RUN echo "alias ll='ls -alF --color=auto'" >> /root/.bash_aliases
-RUN apt-get update && apt-get install -y vim
+WORKDIR /root
+RUN wget http://download.go.cd/gocd-deb/go-agent-15.1.0-1863.deb && \
+  dpkg -i go-agent*.deb
